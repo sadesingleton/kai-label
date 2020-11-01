@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+html, body{
+	font-family: 'Avenir Next Condensed','Source Sans Pro', Arial, Helvetica, sans-serif;
+	background: #f4f7fd;
+	overflow: hidden;
+	width: 100vw;
+	overflow-y: scroll;
+}
+header{
+	position: fixed;	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 60px;
+	padding: 0 10%;
+	z-index: 10;
+
+}
+header .logo a{
+	font-weight: 600;
+	font-size: 2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	display: block;
+
+}
+header .menu{
+	display: flex;
+   	margin-bottom: 0;
+}
+header .menu.mobile-mode .link{
+  display: none;
+
+}
+header .menu .open-mobile-menu{
+  display: none;
+
+}
+header .menu.mobile-mode .open-mobile-menu{
+  display: block;
+  color: white;
+
+}
+header .menu.mobile-mode .open-mobile-menu{
+  display: block;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+}
+header .menu a{
+	display: inline-block;
+	font-weight: 400;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;	
+
+}
+header .menu .link{
+	padding: 20px;
+
+
+}
+header .menu .dropdown{
+	position: relative;
+
+	
+}
+header .menu .dropdown:hover .sub-menu, header .menu .dropdown .sub-menu:hover{
+	display: block;
+
+}
+header .menu .dropdown .sub-menu{
+	display: none;
+	position: absolute;
+	transform: translate3d(0, 10px,0);
+	background: black;
+	color: #dddfe4;
+	min-width: 100px;
+	border-radius: 3px;
+}
+header .menu .dropdown .sub-menu a{
+	color: #dddfe4;
+	display: block;
+	padding: 10px;
+}
+#jumbo{
+	background: black;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	margin-bottom: 25px;
+	overflow: hidden;
+
+}
+#jumbo .bg-image{
+  background: url("jumbobg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+
+}
+#jumbo .bg-video{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	transform: scale(1.5);
+}
+#jumbo .transparent-color{
+	background: rgba(66,53,88, .8);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+}
+#jumbo .titles{
+	position: absolute;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+#jumbo .titles h1{
+	font-size: 7rem;
+	color: #4e66ed;
+	font-weight: 800;
+	text-transform: uppercase;
+	transform: translate3d(100px, 0,0);
+
+}
+#jumbo .titles h2{
+	font-size: 4.5rem;
+	color: white;
+	font-weight: 100;
+	text-transform: uppercase;
+	transform: translate3d(150px, 0,0);
+}
+#jumbo .state{
+	background: white;
+	position: absolute;
+	height: 12%;
+	z-index: 3;
+	width: 100%;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+}
+#jumbo .state .number{
+	font-size: 5rem;
+	font-weight: 400;
+	transform: translate3d(50px, 0,0);
+}
+#jumbo .store-info {
+	background: #4e66ed;
+	position: absolute;
+	height: 20%;
+	z-index: 3;
+	width: 75%;
+	bottom: 0;
+	right: 0;
+	display: flex;
+}
+#jumbo .store-info img{
+	height: 100%;
+	width: 25%;
+	object-fit: cover;
+	cursor: pointer;
+	filter: saturate(0%);
+	transition: all .4s ease-in-out;
+}
+#jumbo .store-info img:hover{
+	height: 100%;
+	width: 25%;
+	object-fit: cover;
+	cursor: pointer;
+	filter: saturate(100%);
+}
+#twocollections{
+	margin-bottom: 25px;
+	overflow: hidden;
+
+}
+#twocollections .left-c .left-c-img{
+	width: 100%;
+	position: relative;
+}
+#twocollections .left-c .left-c-img .overlay{
+	position: absolute;
+	width: 100%;
+	background: rgb(0, 0, 0, .4);
+	height: 100%
+}
+#twocollections .left-c .left-c-img img{
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	object-position: center;
+}
+#twocollections .left-c .collection-title{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: flex-end;
+	flex-direction: column;
+	color: white;
+	font-size: 3rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+#twocollections .left-c .collection-title span{
+	line-height: 1.3;
+	transform: translate3d(-80px, 50px,0);	
+}
+#twocollections .right-c{	
+	
+}
+#twocollections .right-c .right-c-bg{	
+	background: #dddfe4;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#twocollections .right-c .right-c-bg .right-c-img{
+	height:400px;
+	width: 400px;
+
+}
+#twocollections .right-c .right-c-bg .right-c-img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+
+}
+#twocollections .right-c .right-c-bg .right-c-img .collection-title span{
+	font-size: 3rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #1b1b1b;
+	transform: translate3d(-58px,-140px, 0);
+	display: block;
+
+}
+#horizontal-sale{
+
+
+}
+#horizontal-sale .overlay{
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0, .5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+#horizontal-sale .overlay .percent-number{
+	color: white;
+	font-size: 15rem;
+	font-weight: 900;
+	line-height: 1;
+
+}
+#horizontal-sale .overlay .title{
+	color: white;
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 1;
+	letter-spacing: 15px;
+	margin-bottom: 1rem;
+
+
+}
+#horizontal-sale .overlay a{
+	display: block;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: .5;
+	padding: 15px 60px;
+	border: 2px solid white;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+
+}
+#horizontal-sale .overlay a:hover{
+	color: #dddfe4;
+	background: #4e66ed;
+	border: #3b3b3b;
+
+}
+#product-group{
+	padding: 50px 0 0 0;
+	overflow: hidden;
+	
+
+}
+#product-group div[class*="col"]{
+	margin-bottom: 50px;
+
+}	
+#product-group h2{
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 50px;
+
+}
+#product-group .product-bg{
+	background: white;
+	height: 100%;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	margin-bottom: 50px;
+
+}
+#product-group .product-bg .product-img{
+	width: 80%;
+}
+#product-group .product-bg .overlay{
+	background:rgb(0, 0, 0, .8);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transform: all .2 ease-in-out;
+	opacity: 0;
+	cursor: pointer;
+	color: white;
+}
+ #product-group .product-bg .overlay:hover{
+	opacity: 1;
+	
+
+}
+#product-group .product-bg .overlay .product-title{
+	font-weight: 400;
+	font-size: 1.3rem;
+
+}
+#product-group .product-bg .overlay .product-price{
+	font-weight: 600;
+
+}
+footer{
+	background: #1b1b1b;
+	padding: 50px 0;
+	overflow: hidden;
+
+}
+footer .footer-menu .menu-title, footer .social-title{
+	color: #4e66ed;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+
+}
+footer .footer-menu a{
+	color: white;
+
+}
+footer .social-icons{
+	display: flex;
+
+}	
+footer .social-icons li{
+	margin-right: 15px;
+
+
+}
+footer .social-icons a{
+	display: flex;
+	height: 30px;
+	width: 30px;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	border-radius: 50%;
+	font-size: 1.3rem;
+	text-decoration: none;
+	color: black;
+	transform: all .3 ease-in-out;
+}
+footer .social-icons a:hover{
+	color: white;
+	background: #4e66ed;
+}
+footer .address{
+	color: #dddfe4;
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+#mobile-menu{
+	background: black;
+	height: 100vh;
+	width: 600px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	padding: 20px;
+	display: none;
+	transform: translate3d(-100%, 0,0);
+
+}
+#mobile-menu.active{
+	display: block;
+}
+#mobile-menu .logo{
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+
+}
+#mobile-menu .logo a{
+	color: white;
+	text-transform: uppercase;
+}
+.close-mobile-menu{
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 2rem;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 5px;
+  	cursor: pointer;
+}
+#mobile-menu .menu li{
+	margin-bottom: 1rem;
+}
+#mobile-menu .menu > li > a{
+	color: #4e66ed;
+	font-size: 1.2rem;
+	display: block;
+	/*border-bottom: .5px solid white;*/
+	margin-bottom: 15px;
+	text-align: center;
+	padding-bottom: 10px;
+
+}
+#mobile-menu .menu > li.dropdown{
+	
+}
+/*#mobile-menu .menu > li.dropdown a{
+	color: white;
+	font-size: 1.2rem;
+	display: inline-block;
+	border-bottom: none;
+}*/
+#mobile-menu .menu > li.dropdown .sub-menu a{
+	color: white;
+	font-size: 1.2rem;
+	display: inline-block;
+	border-bottom: none;
+	padding: 10px 7px;
+}
+
+ /* TABLET */
+ @media (min-width: 768px) and (max-width: 991px){
+	body{ 
+		/*background-color: red;*/
+	}
+	#twocollections .left-c .collective-title span{
+		font-size: 2.8rem;
+	}
+	#twocollections .right-c .right-c-bg .right-c-img .collection-title span{
+		font-size: 2.8rem;
+		padding-left: 50px;
+	}
+	#horizontal-sale .overlay .percent-number{
+		font-size: 12rem;
+    }
+    #jumbo .state .number{
+    	font-size: 3rem;
+    }
+}
+
+ /* LARGE PHONES */
+@media (min-width: 576px) and (max-width: 767px){
+	body{
+		/*background-color: yellow;*/
+	}
+	#jumbo .titles h1{
+		font-size: 4rem;	
+	}
+	#jumbo .titles h2{
+		font-size: 2.7rem;
+	}
+	#twocollections .left-c .collective-title span{
+		font-size: 2.8rem;
+	}
+	#twocollections .right-c .right-c-bg .right-c-img .collection-title span{
+		font-size: 2.8rem;
+		padding-left: 20px;
+	}
+	#horizontal-sale .overlay .percent-number{
+		font-size: 12rem;
+	}
+	 #jumbo .state .number{
+    	font-size: 3rem;
+    }
+}
+
+ /* SMALL PHONES */
+@media (min-width: 1px) and (max-width: 575px){
+	body{
+		/*background-color: purple;*/
+	}
+	#jumbo .titles h1{
+		font-size: 4rem;	
+	}
+	#jumbo .titles h2{
+		font-size: 2.7rem;
+	}
+	#twocollections .left-c .collective-title span{
+		font-size: 2.8rem;
+	}
+	#twocollections .right-c .right-c-bg .right-c-img .collection-title span{
+		font-size: 2.8rem;
+		padding-left: 20px;
+	}
+	#horizontal-sale .overlay .percent-number{
+		font-size: 12rem;
+
+	}
+	 #jumbo .state .number{
+    	font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
